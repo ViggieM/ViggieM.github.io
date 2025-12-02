@@ -1,0 +1,66 @@
+---
+import NavbarLink from "@components/NavbarLink.astro";
+
+// Build navigation URLs using Astro's i18n utilities
+const homeUrl = "/";
+const aboutUrl = "/about";
+const projectsUrl = "/projects";
+const articlesUrl = "/blog";
+---
+
+<div class="navbar bg-base-100 shadow-sm">
+	<div class="navbar-start">
+		<div class="drawer w-auto">
+			<input id="mobile-navigation-toggle" type="checkbox" class="drawer-toggle" />
+			<div class="drawer-content">
+				<!-- Page content here -->
+				<label
+					for="mobile-navigation-toggle"
+					aria-label="Open mobile menu"
+					class="btn btn-ghost drawer-button lg:hidden"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-5 w-5"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h8m-8 6h16"></path>
+					</svg>
+				</label>
+			</div>
+			<div class="drawer-side">
+				<label for="mobile-navigation-toggle" aria-label="close sidebar" class="drawer-overlay"
+				></label>
+				<ul class="menu bg-base-200 min-h-full w-80 p-4">
+					<li><NavbarLink href={homeUrl}>Home</NavbarLink></li>
+					<li><NavbarLink href={aboutUrl}>About</NavbarLink></li>
+					<li><NavbarLink href={projectsUrl}>Projects</NavbarLink></li>
+					<li><NavbarLink href={articlesUrl}>Blog</NavbarLink></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="navbar-center hidden lg:flex">
+		<ul class="menu menu-horizontal px-1">
+			<li><NavbarLink href={homeUrl}>Home</NavbarLink></li>
+			<li><NavbarLink href={aboutUrl}>About</NavbarLink></li>
+			<li><NavbarLink href={projectsUrl}>Projects</NavbarLink></li>
+			<li><NavbarLink href={articlesUrl}>Blog</NavbarLink></li>
+		</ul>
+	</div>
+	<div class="navbar-end">
+		<a class="btn btn-ghost rounded-full p-0 text-xl" href={aboutUrl}
+			><div class="avatar">
+				<div class="w-10 rounded-full">
+					<img src="/profile-picture.jpg" alt="Profile" />
+				</div>
+			</div></a
+		>
+	</div>
+</div>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { EMAIL, LINKEDIN_URL, GITHUB_URL } from "@/consts";
+---
+
+<BaseLayout title="Contact">
+	<div class="prose">
+		<h1>Contact</h1>
+
+		<section>
+			<h2>Get in Touch</h2>
+			<p class="mt-6">
+				I'm always interested in connecting with fellow developers, potential collaborators, or
+				anyone who wants to discuss technology and software development.
+			</p>
+
+			<div class="space-y-4">
+				<div class="flex items-center gap-3">
+					<span class="icon-[mdi--email] size-6 text-gray-600" aria-hidden="true"></span>
+					<div>
+						<h3>Email</h3>
+						<a href={`mailto:${EMAIL}`} class="text-blue-600 hover:text-blue-800">{EMAIL}</a>
+					</div>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<span class="icon-[mdi--linkedin] size-6 text-gray-600" aria-hidden="true"></span>
+					<div>
+						<h3>LinkedIn</h3>
+						<a
+							href={LINKEDIN_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-blue-600 hover:text-blue-800"
+						>
+							Connect on LinkedIn
+						</a>
+					</div>
+				</div>
+
+				<div class="flex items-center gap-3">
+					<span class="icon-[mdi--github] size-6 text-gray-600" aria-hidden="true"></span>
+					<div>
+						<h3>GitHub</h3>
+						<a
+							href={GITHUB_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-blue-600 hover:text-blue-800"
+						>
+							View my GitHub profile
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-12">
+			<h2>Response Time</h2>
+			<p class="text-gray-600">
+				I typically respond to emails within 24-48 hours during business days. For urgent matters,
+				please mention it in your message subject line.
+			</p>
+		</section>
+	</div>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+import Base from "@layouts/Base.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Base title={`${title} | Viggie.dev`}>
+	<div class="container mx-auto max-w-4xl px-4 py-8">
+		<slot />
+	</div>
+</Base>

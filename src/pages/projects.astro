@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects">
+	<h1 class="page-heading">Projects</h1>
+	<div class="mt-12 grid gap-4 md:grid-cols-2">
+		<div class="card bg-base-100 shadow-sm">
+			<figure class="h-64">
+				<img src="/projects/minimalistdjango.png" alt="minimalistdjango.com website" />
+			</figure>
+			<div class="card-body">
+				<h2 class="card-title">Minimalistdjango</h2>
+				<p>My first Blog on Web Development, with focus on the Django web framework.</p>
+				<div class="card-actions mt-4 justify-end">
+					<a class="btn btn-primary" href="https://minimalistdjango.com" target="_blank"
+						>Visit Site</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="card bg-base-100 shadow-sm">
+			<figure class="h-64 bg-[#ece3ca]">
+				<div class="flex gap-4">
+					<img src="/projects/breader-icon-96.png" alt="Breader icon" />
+					<img src="/projects/breader-logo.svg" alt="Breader Logo" />
+				</div>
+			</figure>
+			<div class="card-body">
+				<h2 class="card-title">Breader</h2>
+				<p>A local first Bookmarking app, built with SvelteKit.</p>
+				<div class="card-actions mt-4 justify-end">
+					<a class="btn btn-primary" href="https://breader.app" target="_blank">Visit Site</a>
+				</div>
+			</div>
+		</div>
+		<div class="card bg-base-100 shadow-sm">
+			<figure class="h-64">
+				<img src="/projects/markdown-editor.jpg" alt="Markdown Editor interface" />
+			</figure>
+			<div class="card-body">
+				<h2 class="card-title">Markdown Editor</h2>
+				<p>
+					A markdown editor built with Svelte 5 and SvelteKit, featuring a split-pane interface with
+					live preview and dark mode support.
+				</p>
+				<div class="card-actions mt-4 justify-end">
+					<a
+						class="btn btn-primary"
+						href="https://markdown-editor.viggiem.workers.dev/"
+						target="_blank">Visit Site</a
+					>
+					<a
+						class="btn btn-secondary"
+						href="https://github.com/ViggieM/markdown-editor"
+						target="_blank">See on GitHub</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

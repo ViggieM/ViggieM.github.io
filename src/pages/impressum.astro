@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { FULL_NAME, STREET_ADDRESS, CITY_POSTAL, EMAIL } from "@/consts";
+---
+
+<BaseLayout title="Impressum">
+	<div class="prose">
+		<h1>Impressum</h1>
+
+		<section>
+			<h2>Legal Notice</h2>
+			<p>Information in accordance with Section 5 TMG (German Telemedia Act).</p>
+
+			<div>
+				<h3>Contact Information</h3>
+				<p>{FULL_NAME}</p>
+				<p class="text-gray-600">{STREET_ADDRESS}</p>
+				<p class="text-gray-600">{CITY_POSTAL}</p>
+			</div>
+
+			<div>
+				<h3>Contact</h3>
+				<p>Email: {EMAIL}</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Disclaimer</h2>
+			<p>
+				<strong>Liability for Content:</strong> The contents of our pages were created with great care.
+				However, we cannot guarantee the accuracy, completeness, and timeliness of the content.
+			</p>
+			<p>
+				<strong>Liability for Links:</strong> Our website contains links to external websites over whose
+				content we have no control. Therefore, we cannot accept any liability for this external content.
+			</p>
+		</section>
+	</div>
+</BaseLayout>

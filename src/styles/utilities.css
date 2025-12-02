@@ -1,0 +1,74 @@
+/* can be used to remove the marker on a detail html element*/
+.no-marker {
+	&::marker {
+		content: "";
+	}
+}
+
+/* Hide text, make it available for screen readers only */
+.sr-only {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.prose {
+	a {
+		@apply text-accent-dark hover:text-accent;
+	}
+
+	h1 {
+		@apply text-4xl font-bold;
+	}
+
+	h2 {
+		@apply mt-8 text-2xl font-semibold;
+	}
+
+	h3 {
+		@apply mt-6 text-xl font-semibold;
+	}
+
+	p {
+		@apply mt-4;
+	}
+
+	ul {
+		@apply mt-4 list-inside list-disc;
+	}
+
+	ol {
+		@apply mt-4 list-inside list-decimal;
+	}
+
+	ul ul,
+	ol ul {
+		@apply ml-6 list-disc;
+	}
+
+	ul ol,
+	ol ol {
+		@apply ml-6 list-decimal;
+	}
+
+	li > p:first-child {
+		@apply mt-0;
+		display: inline;
+	}
+
+	.expressive-code {
+		@apply my-4;
+	}
+}
+
+.page-heading {
+	@apply text-base-content text-center text-3xl font-bold tracking-wide lg:text-5xl;
+}

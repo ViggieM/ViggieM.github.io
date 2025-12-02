@@ -1,0 +1,26 @@
+---
+interface Props {
+	href: string;
+}
+
+const { href, ...props } = Astro.props;
+const pathSegments = Astro.url.pathname.split("/").filter(Boolean);
+const basePath = pathSegments[0];
+const hrefSegments = href.split("/").filter(Boolean);
+const baseHref = hrefSegments[0];
+const isActive = basePath === baseHref;
+---
+
+<a
+	{href}
+	class:list={["text-base-content text-base lg:text-sm", { "font-bold": isActive }]}
+	{...props}
+>
+	<slot />
+</a>
+
+<style>
+	.font-bold {
+		font-weight: 600;
+	}
+</style>

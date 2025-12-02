@@ -1,0 +1,33 @@
+---
+import ArticleLayout from "@layouts/ArticleLayout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+	const paths = [];
+
+	const posts = await getCollection("blog");
+
+	// Sort by date descending
+	const postsSortedByDate = posts.sort(
+		(a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
+	);
+
+	for (const post of postsSortedByDate) {
+		paths.push({
+			params: { slug: post.slug },
+			props: { post },
+		});
+	}
+
+	return paths;
+}
+
+const { post } = Astro.props as {
+	post: CollectionEntry<"blog">;
+};
+const { Content } = await post.render();
+---
+
+<ArticleLayout title={post.data.title} publishedDate={post.data.publishedDate}>
+	<Content />
+</ArticleLayout>

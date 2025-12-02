@@ -1,0 +1,32 @@
+@import "@fontsource-variable/inter";
+
+html {
+	@apply scroll-smooth;
+	scrollbar-gutter: stable !important; /* Prevent layout shift */
+
+	::selection {
+		@apply bg-accent/30;
+	}
+}
+
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	grid-template-columns: 1fr;
+	overscroll-behavior: contain; /* Prevent scroll chaining */
+	font-family: "Inter Variable", sans-serif;
+}
+
+header {
+}
+
+main {
+}
+
+footer {
+}
+
+todo {
+	display: none;
+}
