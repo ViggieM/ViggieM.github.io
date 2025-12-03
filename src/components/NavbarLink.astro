@@ -13,7 +13,10 @@ const isActive = basePath === baseHref;
 
 <a
 	{href}
-	class:list={["text-base-content text-base lg:text-sm", { "font-bold": isActive }]}
+	class:list={[
+		"text-base-content text-base tracking-wider lg:text-sm",
+		{ "font-bold": isActive, "opacity-70": !isActive },
+	]}
 	{...props}
 >
 	<slot />
