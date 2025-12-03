@@ -29,9 +29,6 @@ importers:
       tailwindcss:
         specifier: ^4.1.17
         version: 4.1.17
-      xml:
-        specifier: ^1.0.1
-        version: 1.0.1
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.5
@@ -45,9 +42,6 @@ importers:
       '@iconify/tailwind4':
         specifier: ^1.1.0
         version: 1.1.0(tailwindcss@4.1.17)
-      '@types/xml':
-        specifier: ^1.0.11
-        version: 1.0.11
       daisyui:
         specifier: ^5.5.5
         version: 5.5.5
@@ -60,9 +54,6 @@ importers:
       eslint-plugin-jsx-a11y:
         specifier: ^6.10.2
         version: 6.10.2(eslint@9.39.1(jiti@2.6.1))
-      globals:
-        specifier: ^16.5.0
-        version: 16.5.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -891,9 +882,6 @@ packages:
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
-
-  '@types/xml@1.0.11':
-    resolution: {integrity: sha512-9gktTjxBWoz4+X8ZOS+QRFM2/liMQgBv8Z36wuNnomK5jtXFq4IJa7Az4Hzoy+rYux343NkH9Dq+nzIdejVrjw==}
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -3386,9 +3374,6 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  xml@1.0.1:
-    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
-
   xxhash-wasm@1.1.0:
     resolution: {integrity: sha512-147y/6YNh+tlp6nd/2pWq38i9h6mz/EuQ6njIrmW8D1BS5nCqs0P6DG+m6zTGnNz5I+uhZ0SHxBs9BsPrwcKDA==}
 
@@ -4254,10 +4239,6 @@ snapshots:
   '@types/unist@2.0.11': {}
 
   '@types/unist@3.0.3': {}
-
-  '@types/xml@1.0.11':
-    dependencies:
-      '@types/node': 24.10.1
 
   '@types/yauzl@2.10.3':
     dependencies:
@@ -7517,8 +7498,6 @@ snapshots:
       strip-ansi: 7.1.2
 
   wrappy@1.0.2: {}
-
-  xml@1.0.1: {}
 
   xxhash-wasm@1.1.0: {}
 
