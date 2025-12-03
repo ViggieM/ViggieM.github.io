@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { FULL_NAME, STREET_ADDRESS, CITY_POSTAL, EMAIL } from "@/consts";
+import { SITE_TITLE, FULL_NAME, STREET_ADDRESS, CITY_POSTAL, EMAIL } from "@/consts";
 ---
 
-<BaseLayout title="Impressum">
+<BaseLayout title="Impressum" ogDescription={`Impressum and legal information for ${SITE_TITLE}.`}>
 	<div class="prose">
 		<h1>Impressum</h1>
 

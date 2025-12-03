@@ -1,6 +1,6 @@
 ---
 title: "How to Build a Multilingual Routing System in Astro"
-description: "Learn how to architect a flexible i18n routing system in Astro with translated URLs, static page duplication, and dynamic content routing"
+ogDescription: "Learn how to architect a flexible i18n routing system in Astro with translated URLs, static page duplication, and dynamic content routing"
 publishedDate: 2025-11-18
 ---
 

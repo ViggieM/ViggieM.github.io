@@ -28,6 +28,10 @@ const { post } = Astro.props as {
 const { Content } = await post.render();
 ---
 
-<ArticleLayout title={post.data.title} publishedDate={post.data.publishedDate}>
+<ArticleLayout
+	title={post.data.title}
+	publishedDate={post.data.publishedDate}
+	ogDescription={post.data.ogDescription}
+>
 	<Content />
 </ArticleLayout>

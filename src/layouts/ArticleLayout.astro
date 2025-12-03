@@ -3,10 +3,11 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 
 interface Props {
 	title: string;
+	ogDescription: string;
 	publishedDate: Date;
 }
 
-const { title, publishedDate } = Astro.props;
+const { title, ogDescription, publishedDate } = Astro.props;
 
 // Format date according to the current locale
 const formattedDate = publishedDate.toLocaleDateString("en-US", {
@@ -19,7 +20,7 @@ const formattedDate = publishedDate.toLocaleDateString("en-US", {
 const backLinkText = "← Back to articles";
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} {ogDescription}>
 	<article class="prose prose-lg max-w-none">
 		<header class="mb-8">
 			<h1 class="mb-4 text-4xl font-bold">{title}</h1>

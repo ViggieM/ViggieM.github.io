@@ -1,8 +1,12 @@
 ---
+import { SITE_TITLE } from "@consts";
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Privacy Policy">
+<BaseLayout
+	title="Privacy Policy"
+	ogDescription={`Privacy policy and data protection information for ${SITE_TITLE}.`}
+>
 	<div class="prose">
 		<h1>Privacy Policy</h1>
 

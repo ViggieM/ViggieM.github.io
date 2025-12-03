@@ -1,6 +1,6 @@
 ---
 title: "How I use Claude Code"
-description: "A list of best practices I have encountered over time"
+ogDescription: "A list of best practices I have encountered over time"
 publishedDate: 2025-11-18
 ---
 
