@@ -11,7 +11,5 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/movileanuv/";
 export const GITHUB_URL = "https://github.com/ViggieM";
 export const EMAIL = "hello@viggie.dev";
 
-// Address information for Impressum
+// For Impressum
 export const FULL_NAME = "Victor Movileanu";
-export const STREET_ADDRESS = "Schwaigstraße 15";
-export const CITY_POSTAL = "85221 Dachau";

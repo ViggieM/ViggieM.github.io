@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
-import { SITE_TITLE, FULL_NAME, STREET_ADDRESS, CITY_POSTAL, EMAIL } from "@/consts";
+import { SITE_TITLE, EMAIL } from "@/consts";
 ---
 
 <BaseLayout title="Impressum" ogDescription={`Impressum and legal information for ${SITE_TITLE}.`}>
@@ -13,9 +13,7 @@ import { SITE_TITLE, FULL_NAME, STREET_ADDRESS, CITY_POSTAL, EMAIL } from "@/con
 
 			<div>
 				<h3>Contact Information</h3>
-				<p>{FULL_NAME}</p>
-				<p class="text-gray-600">{STREET_ADDRESS}</p>
-				<p class="text-gray-600">{CITY_POSTAL}</p>
+				<img class="mt-4 h-13" src="/addr.svg" />
 			</div>
 
 			<div>
