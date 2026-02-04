@@ -1,5 +1,13 @@
 ---
 import Base from "@layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog", (post) => !!post.data.publishedDate);
+
+// Sort by date descending
+const postsSortedByDate = posts.sort(
+	(a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
+);
 
 const ogDescription =
 	"Frontend developer passionate about creating accessible, performant web experiences. Based in Munich, available for freelance work.";
@@ -12,7 +20,9 @@ const ogDescription =
 				<h1 class="text-base-content text-3xl font-bold md:text-6xl">Hi, I'm Viggie!</h1>
 				<div class="text-neutral/70 mt-2 font-light md:mt-6">
 					<p>I am a Developer, Freelancer, Dancer and Maker.</p>
-					<p>I love building websites that connect people and provide tools for meaningful work.</p>
+					<p>
+						I enjoy building websites to connect people and tools to facilitate meaningful work.
+					</p>
 				</div>
 			</div>
 
@@ -22,5 +32,27 @@ const ogDescription =
 				</div>
 			</div>
 		</header>
+		<hr class="mt-16" />
+		<section class="mt-16">
+			<h2 class="text-2xl font-light">Recent Posts</h2>
+			<ul class="mt-4 flex flex-col gap-6">
+				{
+					postsSortedByDate.map((article) => {
+						const slug = article.slug.replace(`en/`, "");
+						const url = `/blog/${slug}`;
+
+						return (
+							<li class="relative">
+								<a href={url}>
+									<span class="absolute inset-0" />
+									<h3 class="font-bold">{article.data.title}</h3>
+								</a>
+								{article.data.ogDescription}
+							</li>
+						);
+					})
+				}
+			</ul>
+		</section>
 	</div>
 </Base>

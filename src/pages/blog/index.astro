@@ -2,7 +2,7 @@
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("blog", (post) => !!post.data.publishedDate);
 
 // Sort by date descending
 const postsSortedByDate = posts.sort(
@@ -23,35 +23,15 @@ const postsSortedByDate = posts.sort(
 				const url = `/blog/${slug}`;
 
 				return (
-					<li>
-						<div class="card card-side bg-base-100 shadow-sm">
-							<div class="card-body">
-								<h2 class="card-title">{article.data.title}</h2>
-								<p>{article.data.ogDescription}</p>
-								<div class="card-actions justify-end">
-									<a href={url} class="btn btn-primary">
-										Read more
-									</a>
-								</div>
-							</div>
-						</div>
+					<li class="relative">
+						<a href={url}>
+							<span class="absolute inset-0" />
+							<h2 class="font-bold">{article.data.title}</h2>
+						</a>
+						{article.data.ogDescription}
 					</li>
 				);
 			})
 		}
-		<li>
-			<div class="card card-side bg-base-100 shadow-sm">
-				<figure>
-					<img class="size-42" src="/profile-picture.jpg" alt="Profile" />
-				</figure>
-				<div class="card-body">
-					<h2 class="card-title">New blog is released!</h2>
-					<p>Click the button to listen on Spotiwhy app.</p>
-					<div class="card-actions justify-end">
-						<a href="/" class="btn btn-primary">Read more</a>
-					</div>
-				</div>
-			</div>
-		</li>
 	</ul>
 </BaseLayout>

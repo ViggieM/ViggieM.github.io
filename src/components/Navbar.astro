@@ -3,7 +3,6 @@ import NavbarLink from "@components/NavbarLink.astro";
 
 // Build navigation URLs using Astro's i18n utilities
 const homeUrl = "/";
-const aboutUrl = "/about";
 const projectsUrl = "/projects";
 const articlesUrl = "/blog";
 ---
@@ -39,7 +38,6 @@ const articlesUrl = "/blog";
 				></label>
 				<ul class="menu bg-base-200 min-h-full w-80 p-4">
 					<li><NavbarLink href={homeUrl}>Home</NavbarLink></li>
-					<li><NavbarLink href={aboutUrl}>About</NavbarLink></li>
 					<li><NavbarLink href={projectsUrl}>Projects</NavbarLink></li>
 					<li><NavbarLink href={articlesUrl}>Blog</NavbarLink></li>
 				</ul>
@@ -49,18 +47,9 @@ const articlesUrl = "/blog";
 	<div class="navbar-center hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
 			<li><NavbarLink href={homeUrl}>Home</NavbarLink></li>
-			<li><NavbarLink href={aboutUrl}>About</NavbarLink></li>
 			<li><NavbarLink href={projectsUrl}>Projects</NavbarLink></li>
 			<li><NavbarLink href={articlesUrl}>Blog</NavbarLink></li>
 		</ul>
 	</div>
-	<div class="navbar-end">
-		<a class="btn btn-ghost rounded-full p-0 text-xl" href={aboutUrl}
-			><div class="avatar">
-				<div class="w-10 rounded-full">
-					<img src="/profile-picture.jpg" alt="Profile" />
-				</div>
-			</div></a
-		>
-	</div>
+	<div class="navbar-end"></div>
 </div>
