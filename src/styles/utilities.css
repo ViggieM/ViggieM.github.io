@@ -67,6 +67,39 @@
 	.expressive-code {
 		@apply my-4;
 	}
+
+	/* Wikipedia-style footnote styling */
+	sup a[data-footnote-ref] {
+		@apply text-accent-dark font-normal no-underline ml-1;
+		&::before {
+			content: "[";
+		}
+		&::after {
+			content: "]";
+		}
+	}
+
+	section.footnotes {
+		@apply mt-12 pt-4 text-sm;
+		border-top: 1px solid var(--color-base-200);
+
+		ol {
+			@apply mt-2 list-inside list-decimal;
+		}
+
+		li {
+			@apply mt-1;
+		}
+
+		li > p:first-child {
+			@apply mt-0;
+			display: inline;
+		}
+
+		a[data-footnote-backref] {
+			@apply text-accent-dark ml-1 no-underline;
+		}
+	}
 }
 
 .page-heading {
